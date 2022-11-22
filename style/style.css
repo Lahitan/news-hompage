@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
 }
+
 /*Navigation*/
 nav{
     display: flex;
@@ -49,6 +50,7 @@ body{
     line-height: 1.4; 
     max-width: 1440px; 
     min-width: 375px;
+    overflow-x: hidden;
 }
 
 .btn{
@@ -135,7 +137,7 @@ body{
 
 /*wrapper*/
 
-    .wrapper{
+    .wrapper{ 
         display: grid;
         grid-template-areas:
          'item-1 item-1 item-3'
@@ -223,33 +225,7 @@ body{
 
     @media (max-width: 750px) {
 
-        .nav-links ul li{
-            display: block;
-            font-weight: 700;
-        }
-        .nav-links{
-            position: absolute;
-            background: #fff;
-            height: 100vh;
-            width: 200px;
-            top: 0;
-            right: -200px;
-            text-align: left;
-            z-index: 2;
-            transition: 1s;
-        }
-
-        nav .fa{
-            display: block;
-            color: black;
-            margin: 10px;
-            font-size: 22px;
-            cursor: pointer;
-
-        }
-        .nav-links ul{
-            padding: 30px;
-        }
+        
         .wrapper{
             grid-template-areas: 
             'item-1'
@@ -274,6 +250,34 @@ body{
         }
     }
     @media (max-width: 675px) {
+
+        .nav-links ul li{
+            display: block;
+            font-weight: 700;
+        }
+        .nav-links{
+            position: absolute;
+            background: #fff;
+            height: 100%;
+            width: 200;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+        }
+
+        nav .fa{
+            display: block;
+            color: black;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+
+        }
+        .nav-links ul{
+            padding: 30px;
+        }
         .item-2{
             grid-template-columns: 1fr;
         }
